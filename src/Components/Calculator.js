@@ -14,7 +14,7 @@ const Calculator = ({
 
   useEffect(() => {
     if (resultCpt === 10)
-      setFormState("42");
+      setFormState("42.00");
   }, [resultCpt])
 
   const touches = [
