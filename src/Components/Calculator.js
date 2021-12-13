@@ -49,7 +49,7 @@ const Calculator = ({
     if (formState !== "0" && formState !== "") {
       result = calculate(formState);
       let oldState = formState;
-      oldState = result.toString();
+      oldState = result.toFixed(2).toString();
       setFormState(oldState);
     }
     if (formState !== previousFormState)
