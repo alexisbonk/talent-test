@@ -8,11 +8,11 @@ const History = ({
     <history className="history-step">
         {saveForms.map((form, i) => (
             <div 
-                className="content-wrapper"
-                onClick={() => setFormState(form)}
-                key={i} 
+              className="content-wrapper"
+              onClick={() => setFormState(form)}
+              key={i} 
             >
-                {`> ` + form}
+              {`> ` + form}
             </div>
         ))}
     </history>

@@ -1,5 +1,14 @@
 import React, { useState, useEffect} from "react";
 
+const regex = '.+-*/'
+const touches = [
+  7, 8, 9, "del",
+  4, 5, 6, "+",
+  1, 2, 3, "-",
+  ".", 0, "/", "x",
+  "reset", "="
+];
+
 const Calculator = ({ 
   handleChangeTheme, 
   formState,
@@ -9,21 +18,12 @@ const Calculator = ({
   setPreviousFormState,
   setSaveForms 
 }) => {
-  const regex = '.+-*/'
   const [resultCpt, setResultCpt] = useState(0)
 
   useEffect(() => {
     if (resultCpt === 10)
       setFormState("42");
   }, [resultCpt])
-
-  const touches = [
-    7, 8, 9, "del",
-    4, 5, 6, "+",
-    1, 2, 3, "-",
-    ".", 0, "/", "x",
-    "reset", "="
-  ];
   
   const calculate = (calcul) => {
     var checkResult = ''
@@ -148,7 +148,6 @@ const Calculator = ({
           </div>
         </div>
       </div>
-
     </section>
   )
 }

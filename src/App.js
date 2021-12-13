@@ -108,7 +108,12 @@ function App() {
   }
 
   return (
-    <div className="">
+    <>
+      <Tour
+        steps={steps}
+        isOpen={isTourOpen}
+        onRequestClose={() => setIsTourOpen(false)} 
+      />
       <Header 
         theme={theme} 
         handleChangeTheme={handleChangeTheme} 
@@ -130,12 +135,7 @@ function App() {
         setPreviousFormState={setPreviousFormState}
         setSaveForms={setSaveForms}
       />
-      <Tour
-        steps={steps}
-        isOpen={isTourOpen}
-        onRequestClose={() => setIsTourOpen(false)} 
-      />
-    </div>
+    </>
   );
 }
 
